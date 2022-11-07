@@ -1,0 +1,479 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&family=Open+Sans:wght@300&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  padding: 36px 130px;
+  display: flex;
+  align-items: center;
+}
+nav .brand {
+  margin-right: 70px;
+}
+
+nav .bar {
+  flex: 1;
+}
+
+nav .bar a {
+  color: #111;
+  text-decoration: none;
+  margin: 0 35px;
+}
+
+.search-box {
+  display: flex;
+  background-color: #fafafa;
+  border-radius: 40px;
+  align-items: center;
+  padding: 8px 16px;
+  margin-right: 50px;
+}
+
+.search-box .search-icon {
+  font-size: 10px;
+  color: #a0a3bd;
+}
+.search-box .search-input {
+  transition: 0.5s;
+  width: 0px;
+  overflow: hidden;
+}
+.search-input .input {
+  border: none;
+  outline: none;
+  background-color: unset;
+  font-weight: bold;
+  padding: 8px;
+}
+.search-box:hover .search-input {
+  width: 200px;
+  margin-left: 8px;
+}
+nav .profil .expand {
+  display: none;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.75px;
+  color: #4e4b66;
+  padding-top: 5px;
+  transition: 0.5s;
+}
+nav .profil .expand a {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.75px;
+  color: #4e4b66;
+  text-decoration: none;
+}
+nav .profil:hover .expand {
+  display: block;
+}
+/* main */
+.container {
+  display: flex;
+  padding: 36px 130px;
+  background: #f5f6f8;
+}
+
+/* screen left */
+.container .screen-left {
+  width: 328px;
+  height: 475px;
+  background: #ffffff;
+  box-shadow: 0px 8px 32px rgba(186, 186, 186, 0.08);
+  border-radius: 24px;
+  margin-right: 32px;
+  padding-top: 20px;
+}
+.container .screen-left p {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 0.75px;
+  padding-left: 40px;
+  color: #4e4b66;
+  margin-top: 10px;
+}
+.container .screen-left .info {
+  text-align: center;
+}
+.container .screen-left .info .jonas {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 34px;
+  text-align: center;
+  letter-spacing: 0.75px;
+  color: #14142b;
+}
+.container .screen-left .info .moviegoers {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.75px;
+  color: #4e4b66;
+  margin-bottom: 50px;
+}
+.container .screen-left .info hr {
+  border: 1px solid #dedede;
+  margin: 40px 0;
+}
+.container .screen-left .info .btn-profile {
+  background: #5f2eea;
+  border-radius: 16px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.75px;
+  color: #f7f7fc;
+  border: 0;
+  padding: 12px 50px;
+}
+/* screen right */
+.container .screen-right {
+  width: 866px;
+}
+
+.container .screen-right .setting {
+  background: #ffffff;
+  border-radius: 16px;
+  padding-top: 20px;
+  padding-bottom: 0px;
+  padding-left: 20px;
+  margin-bottom: 73px;
+}
+.container .screen-right .setting hr {
+  width: 140px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  margin-left: 5px;
+  border: 2px solid #5f2eea;
+}
+
+.container .screen-right .setting span:nth-child(1) {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 34px;
+  letter-spacing: 0.75px;
+  color: #14142b;
+  margin-right: 56px;
+}
+.container .screen-right .setting span:nth-child(2) {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 34px;
+  letter-spacing: 0.75px;
+  color: #aaaaaa;
+}
+.container .screen-right .setting a {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 34px;
+  letter-spacing: 0.75px;
+  color: #aaaaaa;
+  text-decoration: none;
+}
+.container .screen-right .detail-information {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 40px 32px;
+  margin-bottom: 22px;
+}
+.container .screen-right .detail-information h3 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 0.75px;
+  color: #14142b;
+}
+.container .screen-right .detail-information hr {
+  border: 1px solid #dedede;
+  margin-bottom: 49px;
+}
+.container .screen-right .detail-information .bio {
+  display: flex;
+  margin-bottom: 25px;
+}
+.container .screen-right .detail-information .bio .bio-dist {
+  flex: 1;
+}
+.container .screen-right .detail-information .bio label {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #4e4b66;
+
+  margin-top: 50px;
+}
+.container .screen-right .detail-information .bio .bio-dist .input {
+  padding-top: 12px;
+}
+.container .screen-right .detail-information .bio input {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.75px;
+  color: #4e4b66;
+  background: #fcfdfe;
+  border: 1px solid #dedede;
+  border-radius: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 130px;
+}
+.container .screen-right .btn-update button {
+  background: #5f2eea;
+  border-radius: 16px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.75px;
+  color: #f7f7fc;
+  padding: 11px 100px;
+  border: 0;
+  margin-bottom: 22px;
+}
+.container .screen-right .account-privacy {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 40px 32px;
+  margin-bottom: 22px;
+}
+.container .screen-right .account-privacy h3 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 0.75px;
+  color: #14142b;
+}
+.container .screen-right .account-privacy hr {
+  border: 1px solid #dedede;
+  margin-bottom: 49px;
+}
+.container .screen-right .account-privacy .bio {
+  display: flex;
+  margin-bottom: 25px;
+}
+.container .screen-right .account-privacy .bio .bio-dist {
+  flex: 1;
+}
+.container .screen-right .account-privacy .bio label {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #4e4b66;
+
+  margin-top: 50px;
+}
+.container .screen-right .account-privacy .bio .bio-dist .input {
+  padding-top: 12px;
+}
+.container .screen-right .account-privacy .bio input {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.75px;
+  color: #4e4b66;
+  background: #fcfdfe;
+  border: 1px solid #dedede;
+  border-radius: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 130px;
+}
+.container .screen-right .btn-update-2 button {
+  background: #5f2eea;
+  border-radius: 16px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.75px;
+  color: #f7f7fc;
+  padding: 11px 100px;
+  border: 0;
+  margin-bottom: 0x;
+}
+/* before footer */
+.before-footer {
+  display: flex;
+  padding: 50px 0;
+}
+.before-footer .change {
+  border: 2px solid #5f2eea;
+  border-radius: 4px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.75px;
+  padding: 12px 60px;
+  color: #5f2eea;
+  margin-right: 225px;
+}
+.before-footer .checkout {
+  border: 2px solid #5f2eea;
+  border-radius: 4px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.75px;
+  padding: 12px 60px;
+  color: #5f2eea;
+}
+.before-footer .checkout:hover {
+  display: block;
+  color: white;
+  background: #5f2eea;
+}
+/* Footer */
+
+footer {
+  margin-top: 50px;
+  display: flex;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 130px;
+  padding-right: 130px;
+}
+
+footer .desc-foot {
+  width: 300px;
+}
+footer .deskripsi {
+  font-family: "Mulish";
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.75px;
+  color: #6e7191;
+  line-height: 32px;
+}
+.text-footer {
+  padding: 15px 50px;
+}
+footer .text-footer span {
+  font-size: 16px;
+  color: #000000;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+  font-weight: bold;
+}
+.text-footer .list-1 {
+  padding-top: 15px;
+}
+.list-1 .list-text {
+  font-family: "Mulish";
+  font-size: 14px;
+  color: #4e4b66;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  padding: 5px 0;
+}
+
+.follow-us .text-us {
+  font-size: 16px;
+  color: #000000;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+footer .no-list {
+  list-style: none;
+  padding: 0;
+}
+
+footer .no-list li {
+  display: flex;
+  padding-top: 15px;
+}
+footer .footer-image {
+  padding: 15px 0;
+}
+
+footer .follow-us {
+  padding: 15px 50px;
+  font-family: "Mulish";
+  font-size: 14px;
+  color: #6e7191;
+}
+footer .no-list .text-us {
+  font-size: 16px;
+  color: #000000;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+  font-weight: bold;
+}
+footer .no-list .text-social {
+  padding-left: 10px;
+  padding-bottom: 15px;
+}
+
+.copyright {
+  text-align: center;
+  font-family: "Mulish";
+  font-size: 14px;
+  color: #4e4b66;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  padding-bottom: 50px;
+}

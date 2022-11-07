@@ -1,0 +1,537 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&family=Open+Sans:wght@300&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  padding: 36px 130px;
+  display: flex;
+  align-items: center;
+}
+nav .brand {
+  margin-right: 70px;
+}
+
+nav .bar {
+  flex: 1;
+}
+
+nav .bar a {
+  color: #111;
+  text-decoration: none;
+  margin: 0 35px;
+}
+
+.search-box {
+  display: flex;
+  background-color: #fafafa;
+  border-radius: 40px;
+  align-items: center;
+  padding: 8px 16px;
+  margin-right: 50px;
+}
+
+.search-box .search-icon {
+  font-size: 10px;
+  color: #a0a3bd;
+}
+.search-box .search-input {
+  transition: 0.5s;
+  width: 0px;
+  overflow: hidden;
+}
+.search-input .input {
+  border: none;
+  outline: none;
+  background-color: unset;
+  font-weight: bold;
+  padding: 8px;
+}
+.search-box:hover .search-input {
+  width: 200px;
+  margin-left: 8px;
+}
+nav .profil .expand {
+  display: none;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.75px;
+  color: #4e4b66;
+  padding-top: 5px;
+  transition: 0.5s;
+}
+nav .profil .expand a {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.75px;
+  color: #4e4b66;
+  text-decoration: none;
+}
+nav .profil:hover .expand {
+  display: block;
+}
+/* main */
+.container {
+  display: flex;
+  padding: 36px 130px;
+  background: #f5f6f8;
+}
+.container .screen-left {
+  width: 820px;
+  margin-right: 24px;
+}
+.container .screen-left h1 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.25px;
+  color: #14142b;
+}
+.container .screen-left .movie-selected {
+  display: flex;
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 30px 20px;
+  align-items: center;
+  margin-bottom: 46px;
+}
+.container .screen-left .movie-selected span:nth-child(1) {
+  flex: 1;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.25px;
+
+  color: #000000;
+}
+.container .screen-left .movie-selected span:nth-child(2) {
+  border: 8px solid #eff0f7;
+  border-radius: 4px;
+  background: #eff0f7;
+  opacity: 0.8;
+  letter-spacing: 0.75px;
+  padding: 5px 40px;
+
+  color: #5f2eea;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.container .screen-left .choose-seat {
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 120px 152px;
+}
+.container .screen-left .choose-seat div:nth-child(1) {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  color: #4e4b66;
+  text-align: center;
+}
+.container .screen-left .choose-seat hr {
+  background: #d6d8e7;
+  border-radius: 4px;
+  height: 8px;
+  border: 0;
+  width: 400px;
+  position: absolute;
+  padding-right: 0px;
+  left: 305px;
+}
+.container .screen-left .choose-seat .seat {
+  display: flex;
+  padding-top: 50px;
+}
+.container .screen-left .choose-seat .seat .left-seat {
+  display: grid;
+  flex: 1;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  gap: 5px;
+  margin-right: 50px;
+  padding: 1px 1px;
+}
+.container .screen-left .choose-seat .seat .left-seat div {
+  background-color: #d6d8e7;
+  border-radius: 4px;
+}
+.container .screen-left .choose-seat .seat .left-seat span {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.75px;
+
+  /* Text - Body */
+
+  color: #4e4b66;
+}
+.container .screen-left .choose-seat .seat .right-seat span {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.75px;
+
+  color: #4e4b66;
+}
+.container .screen-left .choose-seat .seat .right-seat {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  gap: 5px;
+  padding: 1px 1px;
+}
+.container .screen-left .choose-seat .seat .right-seat div {
+  background-color: #d6d8e7;
+  border-radius: 4px;
+}
+
+.container .screen-left .choose-seat .key-seat {
+  padding: 40px 0;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 34px;
+  letter-spacing: 0.75px;
+
+  color: #000000;
+}
+.container .screen-left .choose-seat .order-color {
+  display: flex;
+}
+.container .screen-left .choose-seat .order-color .grey {
+  display: flex;
+  margin-right: 20px;
+}
+.container .screen-left .choose-seat .order-color .blue {
+  display: flex;
+  margin-right: 20px;
+}
+.container .screen-left .choose-seat .order-color .darkgrey {
+  display: flex;
+  margin-right: 20px;
+}
+.container .screen-left .choose-seat .order-color .grey span {
+  padding-left: 15px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  color: #4e4b66;
+}
+.container .screen-left .choose-seat .order-color .blue span {
+  padding-left: 15px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  color: #4e4b66;
+}
+.container .screen-left .choose-seat .order-color .darkgrey span {
+  padding-left: 15px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  color: #4e4b66;
+}
+/* screen right */
+.container .screen-right {
+  width: 382px;
+}
+.container .screen-right h1 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.25px;
+  color: #14142b;
+}
+.container .screen-right .order-info {
+  background: #ffffff;
+  box-shadow: 0px 8px 16px rgba(186, 186, 186, 0.24);
+  border-radius: 6px;
+  padding: 40px 0px;
+}
+
+.container .screen-right .order-info img {
+  padding-left: 120px;
+}
+.container .screen-right .order-info .text-cinema {
+  display: flex;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 34px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.75px;
+  color: #14142b;
+  padding-left: 65px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.container .screen-right .order-info .text-left-1 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  padding-left: 15px;
+  margin-right: 20px;
+  color: #6b6b6b;
+}
+.container .screen-right .order-info .text-left-2 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  padding-left: 15px;
+  margin-right: 110px;
+  color: #6b6b6b;
+}
+
+.container .screen-right .order-info .text-left-3 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  padding-left: 15px;
+  margin-right: 170px;
+  color: #6b6b6b;
+}
+
+.container .screen-right .order-info .text-left-4 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  padding-left: 15px;
+  margin-right: 137px;
+  color: #6b6b6b;
+}
+.container .screen-right .order-info .text-left-5 {
+  padding-left: 15px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 34px;
+
+  margin-right: 135px;
+  align-items: center;
+  letter-spacing: 0.75px;
+
+  color: #000000;
+}
+.container .screen-right .order-info .text-right {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  color: #14142b;
+}
+.container .screen-right .order-info .text-right-tr {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.25px;
+  color: #5f2eea;
+}
+
+/* before footer */
+.before-footer {
+  display: flex;
+  padding: 50px 0;
+}
+.before-footer .change {
+  border: 2px solid #5f2eea;
+  border-radius: 4px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.75px;
+  padding: 12px 40px;
+  color: #5f2eea;
+  margin-right: 245px;
+}
+.before-footer .checkout {
+  border: 2px solid #5f2eea;
+  border-radius: 4px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.75px;
+  padding: 12px 60px;
+  color: #5f2eea;
+}
+.before-footer .checkout:hover {
+  display: block;
+  color: white;
+  background: #5f2eea;
+}
+.before-footer .checkout a {
+  text-decoration: none;
+  color: #5f2eea;
+}
+.before-footer .checkout:hover a {
+  color: white;
+  text-decoration: none;
+}
+/* Footer */
+
+footer {
+  margin-top: 50px;
+  display: flex;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 130px;
+  padding-right: 130px;
+}
+
+footer .desc-foot {
+  width: 300px;
+}
+footer .deskripsi {
+  font-family: "Mulish";
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.75px;
+  color: #6e7191;
+  line-height: 32px;
+}
+.text-footer {
+  padding: 15px 50px;
+}
+footer .text-footer span {
+  font-size: 16px;
+  color: #000000;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+  font-weight: bold;
+}
+.text-footer .list-1 {
+  padding-top: 15px;
+}
+.list-1 .list-text {
+  font-family: "Mulish";
+  font-size: 14px;
+  color: #4e4b66;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  padding: 5px 0;
+}
+
+.follow-us .text-us {
+  font-size: 16px;
+  color: #000000;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+footer .no-list {
+  list-style: none;
+  padding: 0;
+}
+
+footer .no-list li {
+  display: flex;
+  padding-top: 15px;
+}
+footer .footer-image {
+  padding: 15px 0;
+}
+
+footer .follow-us {
+  padding: 15px 50px;
+  font-family: "Mulish";
+  font-size: 14px;
+  color: #6e7191;
+}
+footer .no-list .text-us {
+  font-size: 16px;
+  color: #000000;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+  font-weight: bold;
+}
+footer .no-list .text-social {
+  padding-left: 10px;
+  padding-bottom: 15px;
+}
+
+.copyright {
+  text-align: center;
+  font-family: "Mulish";
+  font-size: 14px;
+  color: #4e4b66;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  padding-bottom: 50px;
+}

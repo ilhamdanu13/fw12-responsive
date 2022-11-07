@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order History Page</title>
+    <link rel="stylesheet" href="orderhistory.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <div>
+      <nav>
+        <div class="brand">
+          <img src="./logo/Desktop/Tickitz 1.png" alt="Logo" />
+        </div>
+        <div class="bar">
+          <a href="#">Home</a>
+          <a href="#">List Movie</a>
+        </div>
+        <div class="search-box">
+          <div class="search-icon">
+            <i data-feather="search"></i>
+          </div>
+          <div class="search-input">
+            <input class="input" type="text" placeholder="Search Movie Name" />
+          </div>
+        </div>
+        <div>
+          <div class="profil">
+            <img src="./Home Page/Desktop/profil.png" alt="Profil" />
+            <div class="expand">
+              <a href="profilepage.html">Profile</a>
+              <p>Logout</p>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <main class="container">
+        <div class="screen-left">
+          <p>INFO</p>
+          <div class="info">
+            <img src="./Picture/Profile Page/Ellipse 11.png" alt="Profile" />
+            <div>
+              <span class="jonas">Jonas El Rodriguez </span>
+            </div>
+            <div>
+              <span class="moviegoers">Moviegoers</span>
+            </div>
+            <hr />
+            <div>
+              <button class="btn-profile" type="menu">Logout</button>
+            </div>
+          </div>
+        </div>
+        <div class="screen-right">
+          <div class="setting">
+            <span><a href="profilepage.html">Account Settings</a></span>
+            <span>Order History</span>
+            <div><hr /></div>
+          </div>
+          <div class="ticket-active">
+            <div class="titime">
+              <div class="titime-set">
+                <div style="margin-top: 40px">
+                  <span>Tuesday, 07 July 2020 - 04:30pm</span>
+                  <p>Spider-Man: Homecoming</p>
+                </div>
+                <div>
+                  <img src="./Movie Details/cineone.png" alt="cineone" />
+                </div>
+              </div>
+              <div><hr /></div>
+            </div>
+            <div class="btn-ticket">
+              <button type="submit">Ticket active</button>
+              <span><a href="ticketresult.html">See Details</a></span>
+            </div>
+          </div>
+          <div class="ticket-active-2">
+            <div class="titime">
+              <div class="titime-set">
+                <div style="margin-top: 40px">
+                  <span>Monday, 14 June 2020 - 02:00pm</span>
+                  <p>Avengers: End Game</p>
+                </div>
+                <div>
+                  <img src="./Movie Details/ebu.png" alt="ebu" />
+                </div>
+              </div>
+              <div><hr /></div>
+            </div>
+            <div class="btn-ticket">
+              <button type="submit">Ticket used</button>
+              <span><a href="ticketresult2.html">See Details</a></span>
+            </div>
+          </div>
+          <div class="ticket-active-2">
+            <div class="titime">
+              <div class="titime-set">
+                <div style="margin-top: 40px">
+                  <span>Monday, 10 March 2020 - 04:00pm</span>
+                  <p>Thor: Ragnarok</p>
+                </div>
+                <div>
+                  <img src="./Movie Details/ebu.png" alt="ebu" />
+                </div>
+              </div>
+              <div><hr /></div>
+            </div>
+            <div class="btn-ticket">
+              <button type="submit">Ticket Expired</button>
+              <span><a href="ticketresult3.html">See Details</a></span>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div>
+          <div>
+            <img src="./Home Page/logoreal.png" alt="Logo Footer" />
+          </div>
+          <div class="desc-foot">
+            <span class="deskripsi">Stop waiting in line. Buy tickets conveniently, watch movies quietly.</span>
+          </div>
+        </div>
+        <div class="text-footer">
+          <div>
+            <span>Explore</span>
+          </div>
+          <div class="list-1">
+            <ol class="no-list">
+              <li class="list-text">Home</li>
+              <li class="list-text">List Movie</li>
+            </ol>
+          </div>
+        </div>
+        <div class="text-footer">
+          <div>
+            <span>Our Sponsor</span>
+          </div>
+          <div class="footer-image">
+            <img src="./Home Page/pic1.png" alt="Edu" />
+          </div>
+          <div class="footer-image">
+            <img src="./Home Page/pic2.png" alt="CineOne21" />
+          </div>
+          <div class="footer-image">
+            <img src="./Home Page/pic3.png" alt="Hiflix" />
+          </div>
+        </div>
+        <div class="follow-us">
+          <div class="follow-us-img">
+            <div>
+              <span class="text-us">Follow Us</span>
+              <ul class="no-list">
+                <li>
+                  <div><i data-feather="facebook"></i></div>
+                  <div class="text-social">Tickitz Cinema id</div>
+                </li>
+                <li>
+                  <div><i data-feather="instagram"></i></div>
+                  <div class="text-social">tickitz.id</div>
+                </li>
+                <li>
+                  <div><i data-feather="twitter"></i></div>
+                  <div class="text-social">tickitz.id</div>
+                </li>
+                <li>
+                  <div><i data-feather="youtube"></i></div>
+                  <div class="text-social">Tickitz Cinema id</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="copyright">
+        <div>© 2020 Tickitz. All Rights Reserved.</div>
+      </div>
+    </div>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>

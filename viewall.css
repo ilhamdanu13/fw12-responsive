@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&family=Open+Sans:wght@300&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  padding: 36px 130px;
+  display: flex;
+  align-items: center;
+}
+nav .brand {
+  margin-right: 70px;
+}
+
+nav .bar {
+  flex: 1;
+}
+
+nav .bar a {
+  color: #111;
+  text-decoration: none;
+  margin: 0 35px;
+}
+
+.search-box {
+  display: flex;
+  background-color: #fafafa;
+  border-radius: 40px;
+  align-items: center;
+  padding: 8px 16px;
+  margin-right: 50px;
+}
+
+.search-box .search-icon {
+  font-size: 10px;
+  color: #a0a3bd;
+}
+.search-box .search-input {
+  transition: 0.5s;
+  width: 0px;
+  overflow: hidden;
+}
+.search-input .input {
+  border: none;
+  outline: none;
+  background-color: unset;
+  font-weight: bold;
+  padding: 8px;
+}
+.search-box:hover .search-input {
+  width: 200px;
+  margin-left: 8px;
+}
+
+.section-1 {
+  background: #f5f6f8;
+  height: 1350px;
+}
+.section-1 .text {
+  display: flex;
+  padding: 0 130px;
+  flex-grow: 1;
+}
+.section-1 .text-first {
+  flex-grow: 1;
+}
+.section-1 .text .sort {
+  display: flex;
+  position: relative;
+  padding-top: 18px;
+  padding-right: 10px;
+}
+.section-1 .text .sort p {
+  color: #4e4b66;
+  font-family: "Mulish";
+  size: 16px;
+  box-sizing: border-box;
+  border: 1px solid #dedede;
+  border-radius: 16px;
+  background: #fcfdfe;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 100px;
+}
+.section-1 .text .sort .arrow {
+  position: absolute;
+}
+.section-1 .text .sort .arrow img {
+  padding-left: 120px;
+  padding-top: 30px;
+}
+.section-1 .text .search {
+  padding-left: 10px;
+  padding-top: 34px;
+}
+.section-1 .text .search .search-movie {
+  font-family: "Mulish";
+  font-size: 16px;
+  background: #fcfdfe;
+  border: 1px solid #dedede;
+  border-radius: 16px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 100px;
+}
+
+.section-1 .text-first p {
+  font-family: "Mulish";
+  color: #111;
+  font-weight: bold;
+  font-size: 24px;
+  padding-top: 7px;
+}
+
+.section-1 a {
+  display: flex;
+  font-family: "Mulish";
+  color: #5f2eea;
+  text-decoration: none;
+  margin-top: 22px;
+  font-weight: bold;
+}
+
+.section-1 .month {
+  display: flex;
+}
+.section-1 .month-list {
+  display: flex;
+  padding-left: 120px;
+  flex-grow: 1;
+}
+.section-1 .month .btn-month {
+  color: #5f2eea;
+  background: white;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  border: 1px solid #5f2eea;
+  font-family: "Mulish";
+  padding: 5px 35px;
+  border-radius: 4px;
+  margin-left: 4px;
+  margin-right: 10px;
+}
+.section-1 .month .btn-month:hover {
+  display: block;
+  color: white;
+  background: #5f2eea;
+}
+
+.section-1 .layout {
+  width: 1170px;
+  height: 1060px;
+  box-sizing: border-box;
+  border: 1px solid #dedede;
+  border-radius: 8px;
+  text-align: center;
+  background: white;
+  margin-left: 130px;
+  margin-top: 32px;
+}
+.section-1 .list-movie-top {
+  display: flex;
+  padding-top: 36px;
+  padding-bottom: 36px;
+  padding-left: 60px;
+  padding-right: 50px;
+}
+
+.section-1 .list-upcoming {
+  box-sizing: border-box;
+  border: 1px solid #dedede;
+  padding: 32px;
+  border-radius: 8px;
+  margin-right: 50px;
+  text-align: center;
+}
+
+.list-upcoming .list-text span {
+  font-family: "Mulish";
+  font-weight: bold;
+  font-size: 18px;
+  padding-top: 20px;
+}
+
+.list-upcoming .list-text p {
+  font-family: "Open Sans";
+  font-size: 12px;
+  color: #a0a3bd;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.list-upcoming .images {
+  padding-bottom: 24px;
+}
+.list-upcoming .btn-upcoming {
+  color: #5f2eea;
+  background: white;
+  font-size: 14px;
+  width: 159px;
+  line-height: 24px;
+  font-weight: bold;
+  border: 1px solid #5f2eea;
+  font-family: "Mulish";
+  padding: 5px 35px;
+  border-radius: 4px;
+}
+.list-upcoming .btn-upcoming:hover {
+  display: block;
+  background: #5f2eea;
+  color: white;
+}
+.section-1 .list-movie-bottom {
+  display: flex;
+  padding-top: 36px;
+  padding-bottom: 36px;
+  padding-left: 60px;
+  padding-right: 50px;
+}
+.section-1 .list-movie-footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 45px;
+}
+
+.section-1 .list-movie-footer-box:hover {
+  display: block;
+  background: #5f2eea;
+  color: white;
+}
+
+.section-1 .list-movie-footer-box {
+  font-weight: 400;
+  font-family: "Mulish";
+  font-size: 18px;
+  box-sizing: border-box;
+  border: 0;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-right: 20px;
+  background: white;
+}
+footer {
+  margin-top: 50px;
+  display: flex;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 130px;
+  padding-right: 130px;
+}
+
+footer .desc-foot {
+  width: 300px;
+}
+footer .deskripsi {
+  font-family: "Mulish";
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.75px;
+  color: #6e7191;
+  line-height: 32px;
+}
+.text-footer {
+  padding: 15px 50px;
+}
+footer .text-footer span {
+  font-size: 16px;
+  color: #000000;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+  font-weight: bold;
+}
+.text-footer .list-1 {
+  padding-top: 15px;
+}
+.list-1 .list-text {
+  font-family: "Mulish";
+  font-size: 14px;
+  color: #4e4b66;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  padding: 5px 0;
+}
+
+.follow-us .text-us {
+  font-size: 16px;
+  color: #000000;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+footer .no-list {
+  list-style: none;
+  padding: 0;
+}
+
+footer .no-list li {
+  display: flex;
+  padding-top: 15px;
+}
+footer .footer-image {
+  padding: 15px 0;
+}
+
+footer .follow-us {
+  padding: 15px 50px;
+  font-family: "Mulish";
+  font-size: 14px;
+  color: #6e7191;
+}
+footer .no-list .text-us {
+  font-size: 16px;
+  color: #000000;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+  font-weight: bold;
+}
+footer .no-list .text-social {
+  padding-left: 10px;
+  padding-bottom: 15px;
+}
+
+.copyright {
+  text-align: center;
+  font-family: "Mulish";
+  font-size: 14px;
+  color: #4e4b66;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  padding-bottom: 50px;
+}
