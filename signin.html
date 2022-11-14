@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <link rel="stylesheet" href="signin.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="wrapper-left">
+        <div class="picture">
+          <div class="background">
+            <img class="logo" src="./Sign Up/tickitz 1.png" alt="Logo" />
+            <p>wait, watch, wow!</p>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper-right">
+        <div class="description">
+          <div>
+            <span>Sign In</span>
+            <p>Sign in with your data that you entered during
+              your registration</p>
+          </div>
+        </div>
+        <div id="alert" class="alert"></div>
+        <form id="form-login">
+          <label class="label" for="">Email</label>
+          <div class="form-line">
+            <input type="text" placeholder="Write your email" name="email"/>
+          </div class="form-line">
+          <label class="label"  for="">Password</label>
+          <div class="form-line">
+            <div class="eye">
+            <input type="password" placeholder="Write your password" name="password" />
+            <div class="eye-line"><i data-feather="eye"></i></div>
+            </div>
+          </div>
+          <button class="btn-signup" type="submit">Sign In</button>
+        </form>
+        <div class="sign-up">
+          
+          <p>Forgot your password? <a href="forgot.html" style="color: blue;">Reset now</a></p>
+          <p>Don't have an account? <a href="#" style="color: blue;">Sign Up</a></p>
+        </div>
+    </div>
+    <script>
+      const alertElement = document.getElementById("alert");
+      const formLogin = document.getElementById("form-login")
+      formLogin.addEventListener("submit", (event) => {
+        const closeBtn = document.createElement("button");
+        closeBtn.innerHTML = "X"
+        closeBtn.style.marginLeft = "100px"
+        closeBtn.style.background = "#f7a4a4"
+        closeBtn.style.border = "0"
+
+        const formData = new FormData(formLogin);
+        // form data acces
+        console.log(formData.get("email"));
+        if(
+          event.target.email.value === "admin@mail.com" && event.target.password.value === "1234"
+        ){
+          alertElement.innerHTML = "";
+          alertElement.prepend("Login sukses");
+          alertElement.append(closeBtn);
+          alertElement.setAttribute("class", "alert");
+          alertElement.style.display = "inline block";
+          setTimeout(() => {
+            window.location = "homepagejavascript.html";
+          }, 5000)
+        } else {
+          alertElement.innerHTML = "";
+          alertElement.prepend("Login gagal");
+          alertElement.append(closeBtn);
+          alertElement.setAttribute("class", "alert-warning");
+          alertElement.style.display = "inline-block"
+        }
+        closeBtn.addEventListener("click", () => {
+          alertElement.style.display = "none"
+        });
+        event.preventDefault();
+      });
+      formLogin.addEventListener("formdata", (e) => 
+      {
+        const formdata = e.formData;
+
+        formdata.set("email", formdata.get("email").toUpperCase());
+      });
+
+      feather.replace();
+    </script>
+  </body>
+</html>
