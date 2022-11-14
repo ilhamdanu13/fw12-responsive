@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Mulish:wght@300&family=Open+Sans:wght@300&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+}
+.wrapper-left {
+  display: flex;
+  width: 800px;
+  height: 1024px;
+  background-image: url("background.png");
+}
+
+.wrapper-left .picture {
+  display: flex;
+  width: 800px;
+  height: 1024px;
+  background-color: #2b156b;
+  background-size: cover;
+  opacity: 80%;
+  align-items: center;
+  justify-content: center;
+}
+.picture .background {
+  text-align: center;
+}
+.picture .logo {
+  padding-top: 55px;
+}
+.wrapper-left p {
+  margin-top: 0;
+  padding-bottom: 25px;
+  font-family: "Inter";
+  font-size: 48px;
+  color: white;
+  font-weight: bold;
+  line-height: 58px;
+}
+
+.wrapper-right .description {
+  width: 396px;
+  margin-top: 122px;
+  margin-left: 83px;
+}
+.description span {
+  color: #121212;
+  font-size: 48px;
+  font-family: "Inter";
+  font-weight: bold;
+  line-height: 58px;
+}
+
+.description p {
+  font-family: "Inter";
+  color: #aaaaaa;
+  font-size: 18px;
+}
+
+.wrapper-right form {
+  margin-left: 83px;
+  margin-top: 40px;
+}
+form .form-line {
+  position: relative;
+  display: flex;
+  padding: 10px 0;
+}
+.form-line .eye {
+  display: flex;
+  text-align: end;
+}
+.form-line .eye-line {
+  color: #a0a3bd;
+  padding-top: 22px;
+  padding-left: 350px;
+  position: absolute;
+}
+.wrapper-right form .label {
+  font-weight: "Mulish";
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #4e4b66;
+}
+.wrapper-right form input {
+  font-family: "Mulish";
+  width: 400px;
+  padding: 15px 20px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 1px solid #dedede;
+  border-radius: 16px;
+  background: #fcfdfe;
+}
+
+.wrapper-right .sign-up {
+  padding-left: 83px;
+}
+
+.btn-signup {
+  margin-top: 20px;
+  box-sizing: border-box;
+  width: 400px;
+  background: #5f2eea;
+  border-radius: 16px;
+  font-family: "Mulish";
+  font-size: 16px;
+  color: white;
+  padding: 15px 0;
+  border: 0;
+  line-height: 28px;
+  letter-spacing: 0.75px;
+}
+
+.sign-up p {
+  padding-top: 10px;
+  text-align: center;
+  font-family: "Mulish";
+  font-size: 16px;
+  color: #8692a6;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 0.005em;
+}
+.alert {
+  padding-left: 110px;
+}
+.alert,
+.alert-warning {
+  border: 1px solid green;
+  background: #b6e2a1;
+  border-radius: 10px;
+  padding: 10px 20px;
+  min-width: 200px;
+  display: none;
+  margin-left: 80px;
+}
+.alert-warning {
+  border-color: red;
+  background: #f7a4a4;
+}
+.alert-show {
+  display: inline-block;
+}
