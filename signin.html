@@ -36,7 +36,7 @@
           <div class="form-line">
             <div class="eye">
             <input type="password" placeholder="Write your password" name="password" />
-            <div class="eye-line"><i data-feather="eye"></i></div>
+            <div id="change-icon" class="eye-line" data-clicked="false"><i data-feather="eye"></i></div>
             </div>
           </div>
           <button class="btn-signup" type="submit">Sign In</button>
@@ -56,7 +56,7 @@
         closeBtn.style.marginLeft = "100px"
         closeBtn.style.background = "#f7a4a4"
         closeBtn.style.border = "0"
-
+        
         const formData = new FormData(formLogin);
         // form data acces
         console.log(formData.get("email"));
@@ -68,6 +68,9 @@
           alertElement.append(closeBtn);
           alertElement.setAttribute("class", "alert");
           alertElement.style.display = "inline block";
+          alertElement.style.position = "absolute"
+          closeBtn.style.background = "#b6e2a1"
+         
           setTimeout(() => {
             window.location = "homepagejavascript.html";
           }, 5000)
@@ -77,6 +80,9 @@
           alertElement.append(closeBtn);
           alertElement.setAttribute("class", "alert-warning");
           alertElement.style.display = "inline-block"
+          alertElement.style.position = "absolute"
+          
+          
         }
         closeBtn.addEventListener("click", () => {
           alertElement.style.display = "none"
@@ -90,6 +96,17 @@
         formdata.set("email", formdata.get("email").toUpperCase());
       });
 
+
+      const changeIcon = document.getElementById("change-icon");
+      changeIcon.addEventListener("click", () => {
+        if(changeIcon.dataset.clicked === "false"){
+          changeIcon.innerHTML = feather.icons["eye-off"].toSvg();
+          changeIcon.dataset.clicked = "true"
+        } else {
+          changeIcon.innerHTML = feather.icons["eye"].toSvg();
+          changeIcon.dataset.clicked = "false"
+        }
+      })
       feather.replace();
     </script>
   </body>

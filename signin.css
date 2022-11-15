@@ -63,6 +63,7 @@ body {
 .wrapper-right form {
   margin-left: 83px;
   margin-top: 40px;
+  padding-top: 40px;
 }
 form .form-line {
   position: relative;

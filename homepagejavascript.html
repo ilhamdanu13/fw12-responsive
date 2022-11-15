@@ -41,11 +41,11 @@
             <a href="#">view all</a>
           </div>
         </div>
-        <div class="list-image">
-          <div class="border-image">
-            <img src="./Home Page/spidey.png" alt="Spiderman" />
-          </div>
-          <div class="border-image">
+        <div id="list" class="list-image">
+          <!-- <div class="border-image"> -->
+          <!-- <img src="./Home Page/spidey.png" alt="images" /> -->
+          <!-- </div> -->
+          <!-- <div class="border-image">
             <img src="./Home Page/Lion King.png" alt="Lion King" />
           </div>
           <div class="border-image">
@@ -56,7 +56,7 @@
           </div>
           <div class="border-image">
             <img src="./Home Page/Lion King.png" alt="Lion King" />
-          </div>
+          </div> -->
         </div>
       </main>
       <main class="section-3">
@@ -185,6 +185,41 @@
     </div>
   </body>
   <script>
+    // List Movies
+    const listItem = document.getElementById("list");
+    const list = [
+      {
+        picture: "./Home Page/spidey.png",
+      },
+      {
+        picture: "./Home Page/Lion King.png",
+      },
+      {
+        picture: "./Home Page/John Wick.png",
+      },
+      {
+        picture: "./Home Page/spidey.png",
+      },
+      {
+        picture: "./Home Page/Lion King.png",
+      },
+    ];
+    list.forEach((data) => {
+      const listEl = document.createElement("div");
+      listEl.className = "list-image";
+
+      const picture = document.createElement("div");
+      picture.className = "border-image";
+      const img = document.createElement("img");
+      img.src = data.picture;
+      img.alt = "images";
+      picture.appendChild(img);
+      listEl.appendChild(picture);
+
+      listItem.appendChild(listEl);
+    });
+
+    // Upcoming Movies
     const wrapperItem = document.getElementById("wrap");
     const item = [
       {
@@ -212,13 +247,13 @@
         link: "moviedetails.html",
       },
       {
-        title: "The Witches",
+        title: "Hacksaw Ridge",
         picture: "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/zpAhD2QUyCz5bifjZUGVTabplMo.jpg",
         genre: "Adventure, Action, War",
         link: "moviedetails.html",
       },
       {
-        title: "The Witches",
+        title: "Dunkirk",
         picture: "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/ebSnODDg9lbsMIaWg2uAbjn7TO5.jpg",
         genre: "Adventure, Action, War",
         link: "moviedetails.html",
