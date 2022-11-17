@@ -89,13 +89,6 @@
         });
         event.preventDefault();
       });
-      formLogin.addEventListener("formdata", (e) => 
-      {
-        const formdata = e.formData;
-
-        formdata.set("email", formdata.get("email").toUpperCase());
-      });
-
 
       const changeIcon = document.getElementById("change-icon");
       changeIcon.addEventListener("click", () => {
