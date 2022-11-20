@@ -93,7 +93,7 @@
                 <div class="title">Black Widow</div>
                 <div class="genre">Adventure, Sci-Fi, Action</div>
                 <div class="year"></div>
-                <div class="director"></div>
+                <div class="releasedate"></div>
               </div>
               <div>
                 <button class="button-1">Details</button>
@@ -209,7 +209,7 @@
     list.forEach((data) => {
       const listEl = document.createElement("div");
       listEl.className = "list-image";
-
+      // create element and insert images from list 
       const picture = document.createElement("div");
       picture.className = "border-image";
       const img = document.createElement("img");
@@ -224,439 +224,64 @@
     // Upcoming Movies
     const wrapperItem = document.getElementById("wrap");
     //mengakses data dari endpoint
-    const getItem = fetch("https://www.omdbapi.com/?t=Dunkirk&apikey=167d0f8a");
+    const getItem = fetch("https://imdb-api.com/en/API/ComingSoon/k_b9gng2mi");
 
     // async await
     const getData = async () =>{
         const response = await getItem
         const data = await response.json()
         const el = document.createElement("div");
+        const movie = data.items
         el.className = "item";
 
-        const picture = document.createElement("div");
-        picture.className = "picture";
-        const img = document.createElement("img");
-        img.src = data.Poster;
-        console.log(img);
-        img.alt = "image";
-        picture.appendChild(img);
-        el.appendChild(picture);
+        // loop array movie 
+        for (let i = 0; i < movie.length; i++) {
+          const el = document.createElement("div");
+          el.className = "item";
+          // create element and insert images
+          const picture = document.createElement("div");
+          picture.className = "picture";
+          const img = document.createElement("img");
+          img.src = movie[i].image;
+          console.log(img);
+          img.alt = "image";
+          picture.appendChild(img);
+          el.appendChild(picture);
+          // element for movie text
+          const textWrap = document.createElement("div");
+          textWrap.className = "text-wrap";
+        
+          const textMovie = document.createElement("div");
+          textMovie.className = "text-movie";
+          textWrap.appendChild(textMovie);
+          // text title
+          const title = document.createElement("div");
+          title.className = "title";
+          title.textContent = movie[i].title;
+          textMovie.appendChild(title);
+          // text genre
+          const genre = document.createElement("div");
+          genre.className = "genre";
+          genre.textContent = movie[i].genres;
+          textMovie.appendChild(genre);
+          //text year
+          const year = document.createElement("div");
+          year.className = "year";
+          year.textContent = movie[i].year;
+          textMovie.appendChild(year);
+          // text release date
+          const releasedate = document.createElement("div");
+          releasedate.className = "releasedate";
+          releasedate.textContent = movie[i].releaseState;
+          textMovie.appendChild(releasedate);
 
-        const textWrap = document.createElement("div");
-        textWrap.className = "text-wrap";
+          el.appendChild(textWrap);
 
-        const textMovie = document.createElement("div");
-        textMovie.className = "text-movie";
-        textWrap.appendChild(textMovie);
-
-        const title = document.createElement("div");
-        title.className = "title";
-        title.textContent = data.Title;
-        textMovie.appendChild(title);
-
-        const genre = document.createElement("div");
-        genre.className = "genre";
-        genre.textContent = data.Genre;
-        textMovie.appendChild(genre);
-
-        const year = document.createElement("div");
-        year.className = "year";
-        year.textContent = data.Year;
-        textMovie.appendChild(year);
-
-        const director = document.createElement("div");
-        director.className = "director";
-        director.textContent = data.Director;
-        textMovie.appendChild(director);
-
-        el.appendChild(textWrap);
-
-        wrapperItem.appendChild(el);
+          wrapperItem.appendChild(el);
+          }
     }
     getData()
 
-    const getItem1 = fetch("https://www.omdbapi.com/?t=Hacksaw%20Ridge&apikey=167d0f8a");
-
-    const getData1 = async () =>{
-        const response = await getItem1
-        const data = await response.json()
-        const el = document.createElement("div");
-        el.className = "item";
-
-        const picture = document.createElement("div");
-        picture.className = "picture";
-        const img = document.createElement("img");
-        img.src = data.Poster;
-        console.log(img);
-        img.alt = "image";
-        picture.appendChild(img);
-        el.appendChild(picture);
-
-        const textWrap = document.createElement("div");
-        textWrap.className = "text-wrap";
-
-        const textMovie = document.createElement("div");
-        textMovie.className = "text-movie";
-        textWrap.appendChild(textMovie);
-
-        const title = document.createElement("div");
-        title.className = "title";
-        title.textContent = data.Title;
-        textMovie.appendChild(title);
-
-        const genre = document.createElement("div");
-        genre.className = "genre";
-        genre.textContent = data.Genre;
-        textMovie.appendChild(genre);
-
-        const year = document.createElement("div");
-        year.className = "year";
-        year.textContent = data.Year;
-        textMovie.appendChild(year);
-
-        const director = document.createElement("div");
-        director.className = "director";
-        director.textContent = data.Director;
-        textMovie.appendChild(director);
-
-        el.appendChild(textWrap);
-
-        wrapperItem.appendChild(el);
-    }
-    getData1()
-
-    const getItem2 = fetch("https://www.omdbapi.com/?t=1917&apikey=167d0f8a");
-
-    const getData2 = async () =>{
-        const response = await getItem2
-        const data = await response.json()
-        const el = document.createElement("div");
-        el.className = "item";
-
-        const picture = document.createElement("div");
-        picture.className = "picture";
-        const img = document.createElement("img");
-        img.src = data.Poster;
-        console.log(img);
-        img.alt = "image";
-        picture.appendChild(img);
-        el.appendChild(picture);
-
-        const textWrap = document.createElement("div");
-        textWrap.className = "text-wrap";
-
-        const textMovie = document.createElement("div");
-        textMovie.className = "text-movie";
-        textWrap.appendChild(textMovie);
-
-        const title = document.createElement("div");
-        title.className = "title";
-        title.textContent = data.Title;
-        textMovie.appendChild(title);
-
-        const genre = document.createElement("div");
-        genre.className = "genre";
-        genre.textContent = data.Genre;
-        textMovie.appendChild(genre);
-
-        const year = document.createElement("div");
-        year.className = "year";
-        year.textContent = data.Year;
-        textMovie.appendChild(year);
-
-        const director = document.createElement("div");
-        director.className = "director";
-        director.textContent = data.Director;
-        textMovie.appendChild(director);
-
-        el.appendChild(textWrap);
-
-        wrapperItem.appendChild(el);
-    }
-    getData2()
-
-    const getItem3 = fetch("https://www.omdbapi.com/?t=The%20Sea%20Beast&apikey=167d0f8a");
-
-    const getData3 = async () =>{
-        const response = await getItem3
-        const data = await response.json()
-        const el = document.createElement("div");
-        el.className = "item";
-
-        const picture = document.createElement("div");
-        picture.className = "picture";
-        const img = document.createElement("img");
-        img.src = data.Poster;
-        console.log(img);
-        img.alt = "image";
-        picture.appendChild(img);
-        el.appendChild(picture);
-
-        const textWrap = document.createElement("div");
-        textWrap.className = "text-wrap";
-
-        const textMovie = document.createElement("div");
-        textMovie.className = "text-movie";
-        textWrap.appendChild(textMovie);
-
-        const title = document.createElement("div");
-        title.className = "title";
-        title.textContent = data.Title;
-        textMovie.appendChild(title);
-
-        const genre = document.createElement("div");
-        genre.className = "genre";
-        genre.textContent = data.Genre;
-        textMovie.appendChild(genre);
-
-        const year = document.createElement("div");
-        year.className = "year";
-        year.textContent = data.Year;
-        textMovie.appendChild(year);
-
-        const director = document.createElement("div");
-        director.className = "director";
-        director.textContent = data.Director;
-        textMovie.appendChild(director);
-
-        el.appendChild(textWrap);
-
-        wrapperItem.appendChild(el);
-    }
-    getData3()
-   
-    // fetch
-      const getItem4 = fetch("https://www.omdbapi.com/?t=uncharted&apikey=167d0f8a");
-
-    getItem4
-      .then((response) => {
-        return response.json();
-      })
-      .then((results) => {
-        const el = document.createElement("div");
-        el.className = "item";
-
-        const picture = document.createElement("div");
-        picture.className = "picture";
-        const img = document.createElement("img");
-        img.src = results.Poster;
-        console.log(img);
-        img.alt = "image";
-        picture.appendChild(img);
-        el.appendChild(picture);
-
-        const textWrap = document.createElement("div");
-        textWrap.className = "text-wrap";
-
-        const textMovie = document.createElement("div");
-        textMovie.className = "text-movie";
-        textWrap.appendChild(textMovie);
-
-        const title = document.createElement("div");
-        title.className = "title";
-        title.textContent = results.Title;
-        textMovie.appendChild(title);
-
-        const genre = document.createElement("div");
-        genre.className = "genre";
-        genre.textContent = results.Genre;
-        textMovie.appendChild(genre);
-
-        const year = document.createElement("div");
-        year.className = "year";
-        year.textContent = results.Year;
-        textMovie.appendChild(year);
-
-        const director = document.createElement("div");
-        director.className = "director";
-        director.textContent = results.Director;
-        textMovie.appendChild(director);
-
-        el.appendChild(textWrap);
-
-        wrapperItem.appendChild(el);
-      });
-
-      const getItem5 = fetch("https://www.omdbapi.com/?t=The%20Revenant&apikey=167d0f8a");
-
-    getItem5
-      .then((response) => {
-        return response.json();
-      })
-      .then((results) => {
-        const el = document.createElement("div");
-        el.className = "item";
-
-        const picture = document.createElement("div");
-        picture.className = "picture";
-        const img = document.createElement("img");
-        img.src = results.Poster;
-        console.log(img);
-        img.alt = "image";
-        picture.appendChild(img);
-        el.appendChild(picture);
-
-        const textWrap = document.createElement("div");
-        textWrap.className = "text-wrap";
-
-        const textMovie = document.createElement("div");
-        textMovie.className = "text-movie";
-        textWrap.appendChild(textMovie);
-
-        const title = document.createElement("div");
-        title.className = "title";
-        title.textContent = results.Title;
-        textMovie.appendChild(title);
-
-        const genre = document.createElement("div");
-        genre.className = "genre";
-        genre.textContent = results.Genre;
-        textMovie.appendChild(genre);
-
-        const year = document.createElement("div");
-        year.className = "year";
-        year.textContent = results.Year;
-        textMovie.appendChild(year);
-
-        const director = document.createElement("div");
-        director.className = "director";
-        director.textContent = results.Director;
-        textMovie.appendChild(director);
-
-        el.appendChild(textWrap);
-
-        wrapperItem.appendChild(el);
-      });
-
-      const getItem6 = fetch("https://www.omdbapi.com/?t=Troy&apikey=167d0f8a");
-
-    getItem6
-      .then((response) => {
-        return response.json();
-      })
-      .then((results) => {
-        const el = document.createElement("div");
-        el.className = "item";
-
-        const picture = document.createElement("div");
-        picture.className = "picture";
-        const img = document.createElement("img");
-        img.src = results.Poster;
-        console.log(img);
-        img.alt = "image";
-        picture.appendChild(img);
-        el.appendChild(picture);
-
-        const textWrap = document.createElement("div");
-        textWrap.className = "text-wrap";
-
-        const textMovie = document.createElement("div");
-        textMovie.className = "text-movie";
-        textWrap.appendChild(textMovie);
-
-        const title = document.createElement("div");
-        title.className = "title";
-        title.textContent = results.Title;
-        textMovie.appendChild(title);
-
-        const genre = document.createElement("div");
-        genre.className = "genre";
-        genre.textContent = results.Genre;
-        textMovie.appendChild(genre);
-
-        const year = document.createElement("div");
-        year.className = "year";
-        year.textContent = results.Year;
-        textMovie.appendChild(year);
-
-        const director = document.createElement("div");
-        director.className = "director";
-        director.textContent = results.Director;
-        textMovie.appendChild(director);
-
-        el.appendChild(textWrap);
-
-        wrapperItem.appendChild(el);
-      });
-    // const item = [
-    //   {
-    //     title: "The Witches",
-    //     picture: "./Home Page/Witches.png",
-    //     genre: "Adventure, Comedy, Family",
-    //     link: "moviedetails.html",
-    //   },
-    //   {
-    //     title: "Tenet",
-    //     picture: "./Home Page/Tenet.png",
-    //     genre: "Adventure, Comedy, Family",
-    //     link: "moviedetails.html",
-    //   },
-    //   {
-    //     title: "Black Widow",
-    //     picture: "./Home Page/Black Widow.png",
-    //     genre: "Adventure, Comedy, Family",
-    //     link: "moviedetails.html",
-    //   },
-    //   {
-    //     title: "The Witches",
-    //     picture: "./Home Page/Witches.png",
-    //     genre: "Adventure, Comedy, Family",
-    //     link: "moviedetails.html",
-    //   },
-    //   {
-    //     title: "Hacksaw Ridge",
-    //     picture: "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/zpAhD2QUyCz5bifjZUGVTabplMo.jpg",
-    //     genre: "Adventure, Action, War",
-    //     link: "moviedetails.html",
-    //   },
-    //   {
-    //     title: "Dunkirk",
-    //     picture: "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/ebSnODDg9lbsMIaWg2uAbjn7TO5.jpg",
-    //     genre: "Adventure, Action, War",
-    //     link: "moviedetails.html",
-    //   },
-    // ];
-
-    // item.forEach((data) => {
-    //   const el = document.createElement("div");
-    //   el.className = "item";
-
-    //   const picture = document.createElement("div");
-    //   picture.className = "picture";
-    //   const img = document.createElement("img");
-    //   img.src = data.picture;
-    //   img.alt = "image";
-    //   picture.appendChild(img);
-    //   el.appendChild(picture);
-
-    //   const textWrap = document.createElement("div");
-    //   textWrap.className = "text-wrap";
-
-    //   const textMovie = document.createElement("div");
-    //   textMovie.className = "text-movie";
-    //   textWrap.appendChild(textMovie);
-
-    //   const title = document.createElement("div");
-    //   title.className = "title";
-    //   title.textContent = data.title;
-    //   textMovie.appendChild(title);
-
-    //   const genre = document.createElement("div");
-    //   genre.className = "genre";
-    //   genre.textContent = data.genre;
-    //   textMovie.appendChild(genre);
-
-    //   const btnWrapper = document.createElement("div");
-    //   const btn = document.createElement("button");
-    //   btn.className = "button-1";
-    //   btn.textContent = "Details";
-    //   btnWrapper.appendChild(btn);
-    //   textWrap.appendChild(btnWrapper);
-
-    //   el.appendChild(textWrap);
-
-    //   wrapperItem.appendChild(el);
-    // });
     feather.replace();
   </script>
 </html>
